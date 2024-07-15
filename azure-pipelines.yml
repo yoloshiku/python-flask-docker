@@ -21,9 +21,8 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
-      displayName: Build an image
       inputs:
         containerRegistry: 'DockerHub'
-        repository: 'python-flask-docker'
+        repository: 'yoloshikudkr/python-flask-docker'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
